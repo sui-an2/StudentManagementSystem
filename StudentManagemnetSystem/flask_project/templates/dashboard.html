@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <h2>Welcome, {{ username }}!</h2>
+    
+    <div class="menu">
+        <a href="/students">Student List</a>
+        <a href="/add_student">Add Student</a>
+        <a href="/report">Report</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <p>This is your dashboard. Use the menu to manage students.</p>
+</body>
+</html>

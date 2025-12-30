@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <h2>Student Report - Students per Course</h2>
+
+    <div class="menu">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/students">Students</a>
+        <a href="/add_student">Add Student</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Number of Students</th>
+        </tr>
+        {% for row in report_data %}
+        <tr>
+            <td>{{ row.course }}</td>
+            <td>{{ row.count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
